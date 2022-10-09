@@ -1,0 +1,33 @@
+﻿<Window x:Class="Exercicio8WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Exercicio8WPF"
+        mc:Ignorable="d"
+        Title="Exercicio 8" Height="216" Width="477" ResizeMode="NoResize">
+    <Grid Margin="0,0,0,10">
+        <Grid.ColumnDefinitions x:Uid="Dados">
+            <ColumnDefinition Width="Auto" MinWidth="330"/>
+            <ColumnDefinition Width="Auto" MinWidth="294" />
+        </Grid.ColumnDefinitions>
+        <Label x:Name="Distancia" Content="Distancia:" HorizontalAlignment="Left" Margin="10,43,0,0" VerticalAlignment="Top" Height="26" Width="61"/>
+        <Label x:Name="Interacao" Content="Digite uma distancia em metros" HorizontalAlignment="Left" Margin="10,12,0,0" VerticalAlignment="Top" Height="26" Width="178"/>
+        <TextBox x:Name="TextDistancia" HorizontalAlignment="Left" Margin="71,47,0,0" TextWrapping="Wrap" Text="Digite aqui a distancia" VerticalAlignment="Top" Width="230" TextChanged="TextDistancia_TextChanged" Height="18"/>
+        <DataGrid x:Name="Dados" ItemsSource="{Binding Path=Metro}" CanUserResizeColumns="False" CanUserResizeRows="False"  Margin="0,72,0,0" HorizontalAlignment="Left" Width="458" Height="108" VerticalAlignment="Top" Grid.ColumnSpan="2" SelectionChanged="dados_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Quilometro" Binding="{Binding km}"/>
+                <DataGridTextColumn Header="Hectômetro" Binding="{Binding hm}"/>
+                <DataGridTextColumn Header="Decâmetro" Binding="{Binding dam}"/>
+                <DataGridTextColumn Header="Metro"  Binding="{Binding metro}"/>
+                <DataGridTextColumn Header="Decimetro" Binding="{Binding dm}"/>
+                <DataGridTextColumn Header="Decâmetro" Binding="{Binding cm}"/>
+                <DataGridTextColumn Header="Milimetro" Binding="{Binding mm}"/>
+
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Grid.Column="1" x:Name="Acao" Content="ok" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Width="101" Click="Acao_Click" RenderTransformOrigin="0.537,-0.54" Height="20"/>
+
+
+    </Grid>
+</Window>
