@@ -1,4 +1,4 @@
-﻿using Exercicio5;
+﻿using Exercicio5.Models;
 using System.ComponentModel.Design;
 
 class Program 

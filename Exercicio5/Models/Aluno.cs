@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Exercicio5
+namespace Exercicio5.Models
 {
     public class Aluno
     {
